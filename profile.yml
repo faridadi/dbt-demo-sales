@@ -1,0 +1,36 @@
+sales_prod:
+  outputs:
+    raw_layer:
+      type: postgres
+      host: {host}
+      user: {user}
+      password: {pass}
+      port: {port}              
+      dbname: postgres 
+      schema: raw_layer
+      threads: 5
+      sslmode: prefer
+    
+    stg_layer:
+      type: postgres
+      host: {host}
+      user: {user} 
+      password: {pass}
+      port: {port}              
+      dbname: postgres 
+      schema: stg_layer
+      threads: 5
+      sslmode: prefer  
+    
+    wh_layer:
+      type: postgres
+      host: {host}
+      user: {user} 
+      password: {pass}
+      port: {port}              
+      dbname: postgres 
+      schema: wh_layer
+      threads: 5
+      sslmode: prefer
+      
+  target: raw_layer
