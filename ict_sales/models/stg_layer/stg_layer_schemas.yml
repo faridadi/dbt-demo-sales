@@ -1,0 +1,38 @@
+models:
+  - name: stg_sales
+    description: Layer Stagin untuk Data Sales
+    columns:
+      - name: unique_key
+        description: key unik untuk setiap urutan nomor transaksi
+        tests:
+          - not_null
+          - unique
+      
+      - name: no_urut
+        description: no urut transaksi
+        tests:
+          - not_null
+
+      - name: kode_panel
+        tests:
+          - not_null
+
+      - name: nama_panel
+        tests:
+          - not_null
+      
+      - name: keterangan
+        tests:
+          - not_null
+      
+      - name: nama_jenis_barang
+        tests:
+          - not_null
+      
+      - name: kode_kota
+        tests:
+          - not_null
+      
+      - name: nama_kota
+        tests:
+          - not_null

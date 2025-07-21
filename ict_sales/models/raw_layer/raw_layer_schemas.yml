@@ -1,0 +1,20 @@
+models:
+  - name: raw_sales
+    description: Layer Stagin untuk Data Sales
+    columns:
+      - name: unique_key
+        description: key unik untuk setiap urutan nomor transaksi
+        tests:
+          - not_null
+          - unique
+      
+      - name: '"No. Urut"'
+        description: key no urut untuk penanda incremental
+        tests:
+          - not_null
+          
+
+      - name: load_at
+        description: no urut transaksi
+        tests:
+          - not_null

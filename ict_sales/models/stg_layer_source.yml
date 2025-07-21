@@ -1,0 +1,7 @@
+sources:
+  - name: stg_layer
+    description: "stg data from the destination PostgreSQL database."
+    database: postgres
+    schema: stg_layer
+    tables:
+      - name: stg_sales

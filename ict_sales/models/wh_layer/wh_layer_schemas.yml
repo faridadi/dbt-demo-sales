@@ -1,0 +1,112 @@
+models:
+  - name: dim_barang
+    description: Layer OLAP untuk Data Sales
+    columns:
+      - name: sgt_key
+        tests:
+          - not_null
+          - unique
+
+      - name: kode_barang
+        tests:
+          - not_null
+
+      - name: nama_jenis_barang
+        tests:
+          - not_null
+      
+      - name: quantity_standart
+        tests:
+          - not_null
+  
+  - name: dim_customer
+    description: Layer OLAP untuk Data Sales
+    columns:
+      - name: sgt_key
+        tests:
+          - not_null
+          - unique
+
+      - name: kode_konsumen
+        tests:
+          - not_null
+      
+      - name: nama_konsumen
+        tests:
+          - not_null
+  
+  - name: dim_employee_sales
+    description: Layer OLAP untuk Data Sales
+    columns:
+      - name: sgt_key
+        tests:
+          - not_null
+          - unique
+
+      - name: kode_sales
+        tests:
+          - not_null
+      
+      - name: nama_sales
+        tests:
+          - not_null
+  
+  - name: dim_kota
+    description: Layer OLAP untuk Data Sales
+    columns:
+      - name: sgt_key
+        tests:
+          - not_null
+          - unique
+
+      - name: kode_kota
+        tests:
+          - not_null
+      
+      - name: nama_kota
+        tests:
+          - not_null
+  
+  - name: dim_pajak
+    description: Layer OLAP untuk Data Sales
+    columns:
+      - name: sgt_key
+        tests:
+          - not_null
+          - unique
+
+      - name: pajak
+        tests:
+          - not_null
+      
+      - name: kategori_pajak
+        tests:
+          - not_null
+  
+  - name: dim_panel
+    description: Layer OLAP untuk Data Sales
+    columns:
+      - name: sgt_key
+        tests:
+          - not_null
+          - unique
+
+      - name: kode_panel
+        tests:
+          - not_null
+      
+      - name: nama_panel
+        tests:
+          - not_null
+  
+  - name: fact_transaction
+    description: Layer OLAP untuk Data Sales
+    columns:
+      - name: unique_key
+        tests:
+          - not_null
+          - unique
+
+      - name: tgl_referensi
+        tests:
+          - not_null

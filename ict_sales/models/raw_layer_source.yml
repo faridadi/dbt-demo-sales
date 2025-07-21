@@ -1,0 +1,7 @@
+sources:
+  - name: raw_layer
+    description: "Raw data from the destination PostgreSQL database."
+    database: postgres
+    schema: raw_layer
+    tables:
+      - name: raw_sales
